@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Modulo: Digital Signal Processing web app",
+  title: "LibreDSP: Digital Signal Processing web app",
   description: "A web app to design digital filters",
 };
 
