@@ -1,10 +1,10 @@
 # LibreDSP web app
-An interactive controls & signal processing web app that performs:
+An interactive DSP software that performs:
 - Design and visualization of digital filters
 - Hybrid simulation of dynamic systems
 - Power spectral density estimation
 
-## Filter Design
+### Filter Design
 The application supports designing digital filters using the following methods:
 
 - Visually placing poles and zeros on the Z-plane
@@ -18,7 +18,7 @@ After a filter is designed, the application:
 - Generates the corresponding filter coefficients
 - Simulates and visualizes the filter’s output on user-selected input signals
 
-## Hybrid Simulation
+### Hybrid Simulation
 A system consisting of the following elements can be simulated:
 
 - Continuous Plant
@@ -27,7 +27,7 @@ A system consisting of the following elements can be simulated:
 - Sum Block
 - Signal Modifier
 
-## Spectral Estimation
+### Spectral Estimation
 
 For spectrum estimation, the app can receive:
 
