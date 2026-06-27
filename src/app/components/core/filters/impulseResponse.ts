@@ -1,11 +1,18 @@
-export const lowPassImpulseResponse = (cutOffFreq: number, N: number = 1024) => {
-    let array = new Array(N).fill(0);
-    for (let i = 0; i < N; i++) {
-        if (i == N / 2) array[i] = cutOffFreq / Math.PI;
-        else array[i] = 1 / (Math.PI * (i - (N / 2))) * Math.sin(cutOffFreq * (i - N / 2));
+
+// n = 0 => \omega_c / \pi
+// n \neq 0 => frac{\sin{omega_c n}}{n\pi}
+export const lowPassImpulseResponse = (cutOffFreq: number, M: number) => {
+    const array = [];
+    for (let n = -M; n <= M; n++) {
+        if (n == 0) {
+            array.push(cutOffFreq / Math.PI);
+        } else {
+            array.push(Math.sin(cutOffFreq * n) / (Math.PI * n));
+        }
     }
+
     return array;
-}
+};
 
 export const bandpassImpulseResponse = (w1: number, w2: number, N: number = 1024) => {
     let array = new Array(N).fill(0);
