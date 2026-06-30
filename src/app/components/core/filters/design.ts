@@ -67,9 +67,9 @@ const getImpulseResponse = (
     filterType: FilterType) => {
     switch (filterType) {
         case FilterType.LOWPASS:
-            return lowPassImpulseResponse(w1, N / 2);
+            return lowPassImpulseResponse(w1, N);
         case FilterType.HIGHPASS:
-            return bandpassImpulseResponse(Math.PI, w1, N);
+            return bandpassImpulseResponse(w1, Math.PI, N);
         case FilterType.BANDPASS:
             return bandpassImpulseResponse(w1, w2, N);
         case FilterType.BANDSTOP:
