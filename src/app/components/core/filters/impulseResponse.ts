@@ -5,7 +5,7 @@ export const lowPassImpulseResponse = (cutOffFreq: number, M: number) => {
     const array = [];
     const mid = (M - 1) / 2;
     for (let i = 0; i < M; i++) {
-        const n = i - mid; 
+        const n = i - mid;
         if (Math.abs(n) < 0.0001) { 
             array.push(cutOffFreq / Math.PI);
         } else {
