@@ -1,4 +1,4 @@
-import { aValueTimesElementsOfArray, addArraysFromRight, construct_Z_plus_one_or_Z_minus_one_polynomial } from '../utils';
+import { aValueTimesElementsOfArray, addArrays, construct_Z_plus_one_or_Z_minus_one_polynomial } from '../utils';
 
 export const bilinearTransform = (coeff: { num: number[]; den: number[] }): { num: number[]; den: number[] } => {
     // Reverse coefficients
@@ -15,7 +15,7 @@ export const bilinearTransform = (coeff: { num: number[]; den: number[] }): { nu
 
     let resNum: number[] = tmpNum[0] ?? [];
     for (let i = 1; i < tmpNum.length; i++) {
-        resNum = addArraysFromRight(resNum, tmpNum[i]!);
+        resNum = addArrays(resNum, tmpNum[i]!);
     }
 
     // Build denominator
@@ -25,7 +25,7 @@ export const bilinearTransform = (coeff: { num: number[]; den: number[] }): { nu
 
     let resDen: number[] = tmpDen[0] ?? [];
     for (let i = 1; i < tmpDen.length; i++) {
-        resDen = addArraysFromRight(resDen, tmpDen[i]!);
+        resDen = addArrays(resDen, tmpDen[i]!);
     }
 
     // Normalize

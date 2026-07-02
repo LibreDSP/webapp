@@ -10,6 +10,15 @@ export const aValueTimesElementsOfArray = (K: number, arr: number[]) => {
     }
     return res;
 }
+export const addArrays = (a: number[], b: number[]) => {
+    const res = [];
+
+    for (let i = 0; i < a.length; i++) {
+        res.push(a[i]! + b[i]!);
+    }
+
+    return res;
+};
 
 export const addArraysFromRight = (arr1: number[], arr2: number[]) => {
 
@@ -107,6 +116,9 @@ export const multiplyArrayByAConstant = (arr: number[], constant: number): numbe
 };
 
 export const construct_Z_plus_one_or_Z_minus_one_polynomial = (N: number, diff: number): number[] => {
+    if (N === 0)
+        return [1];
+    
     const polynomialCoeffs: number[][] = [];
     for (let i = 0; i < N - diff; i++)
         polynomialCoeffs.push([1, 1]);
